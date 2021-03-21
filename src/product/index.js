@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import "./index.css";
 function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -33,7 +33,8 @@ function ProductPage() {
       </div>
       <div id="contents-box">
         <div id="name">{product.name}</div>
-        <div id="price">{product.price}</div>
+        <div id="price">{product.price + "원"}</div>
+        <div id="createdAt">2021년3월</div>
         <div id="description">{product.description}</div>
       </div>
     </div>
