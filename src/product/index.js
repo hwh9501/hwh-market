@@ -18,6 +18,7 @@ function ProductPage() {
         console.log(error);
       });
   }, []);
+
   if (product === null) {
     return <h1> 로딩중 </h1>;
   }
